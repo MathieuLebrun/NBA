@@ -1,8 +1,29 @@
+//connexion BD
+import { conn } from './connexion.js';
+
+//User argument
+import { nom } from './connexion.js';
+import { prenom } from './connexion.js';
+import { mail } from './connexion.js';
+import { mdp } from './connexion.js';
+
 window.addEventListener("load", function () {
     
+    var arg1 = document.getElementById("myForm");
+    var arg2 = document.getElementById("myForm");
+    var arg3 = document.getElementById("myForm");
+    var arg4 = document.getElementById("myForm");
     
-        
 
+    const p = new Rectangle();
+
+    // Insert Datas to Users.
+    var post = "Insert into Users (Emp_No, Full_Name, Hire_Date) " 
+
+    conn.query(post, function(err, results) {
+        if (err) throw err;
+        console.log("Insert a record!");
+    });
 
     // Accédez à l'élément form …
     var form = document.getElementById("myForm");
