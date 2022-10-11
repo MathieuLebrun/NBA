@@ -8,5 +8,4 @@ function user(nom,prenom,mail,mdp){
     this.prenom=prenom;;
     this.mail=mail;
     this.mdp=mdp;
-    
 }
