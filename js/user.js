@@ -13,3 +13,8 @@ class user{
         this.mdp=mdp;
     }
 }
+
+export { nom };
+export { prenom };
+export { mail };
+export { mdp };

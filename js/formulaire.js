@@ -2,38 +2,41 @@
 import { conn } from './connexion.js';
 
 //User argument
-import { nom } from './connexion.js';
-import { prenom } from './connexion.js';
-import { mail } from './connexion.js';
-import { mdp } from './connexion.js';
+import { nom } from './user.js';
+import { prenom } from './user.js';
+import { mail } from './user.js';
+import { mdp } from './user.js';
+
+//classe user
+import { user } from './user.js';
 
 window.addEventListener("load", function () {
     
-    var arg1 = document.getElementById("myForm");
-    var arg2 = document.getElementById("myForm");
-    var arg3 = document.getElementById("myForm");
-    var arg4 = document.getElementById("myForm");
     
-
-    const p = new Rectangle();
-
-    // Insert Datas to Users.
-    var post = "Insert into Users (Emp_No, Full_Name, Hire_Date) " 
-
-    conn.query(post, function(err, results) {
-        if (err) throw err;
-        console.log("Insert a record!");
-    });
-
     // Accédez à l'élément form …
     var form = document.getElementById("myForm");
 
     // … et prenez en charge l'événement submit.
     form.addEventListener("submit", function (event) {
-    event.preventDefault();
+        event.preventDefault();
 
-    sendData();
+        sendData();
 
+        var arg1 = document.getElementsByName("nom");
+        var arg2 = document.getElementsByName("prenom");
+        var arg3 = document.getElementsByName("Email");
+        var arg4 = document.getElementsByName("mdp");
+        
+
+        let p = new user(arg1,arg2,arg3,arg4);
+
+        // Insert Datas to Users.
+        var post = "Insert into Users ("+nom+","+prenom+","+ mail+","+mdp+")";
+
+        conn.query(post, function(err, results) {
+            if (err) throw err;
+            console.log("Insert a record!");
+        });
     });
 
     function Verification() {
