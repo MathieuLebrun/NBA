@@ -1,4 +1,5 @@
 body{
+    
     display:flex;
     align-items: center;
     justify-content: center;
@@ -7,12 +8,15 @@ body{
     background: linear-gradient(115deg, #56d8e4 10%, #9f01ea 90%);
 }
 #container{
+    
     width:400px;
-    background: #fff;
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 10px;
     padding: 25px 40px 10px 40px;
     margin:0 auto;
     margin-top:10%;
 }
+
 /* Bordered form */
 form {
     width:100%;
@@ -28,7 +32,7 @@ form {
 }
 
 /* Full-width inputs */
-input[type=text], input[type=password] {
+input[type=text], input[type=password],input[type=email] {
     width: 100%;
     padding: 12px 20px;
     margin: 8px 0;
@@ -39,7 +43,8 @@ input[type=text], input[type=password] {
 
 /* Set a style for all buttons */
 input[type=submit] {
-    background-color: #53af57;
+    background-color: #ff7f00;
+    border-radius: 10px;
     color: white;
     padding: 14px 20px;
     margin: 8px 0;
@@ -49,6 +54,6 @@ input[type=submit] {
 }
 input[type=submit]:hover {
     background-color: white;
-    color: #53af57;
-    border: 1px solid #53af57;
+    color: #ff7f00;
+    border: 1px solid #ff7f00;
 }
