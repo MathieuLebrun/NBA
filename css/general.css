@@ -54,13 +54,14 @@ input[type=text], input[type=password],input[type=email] {
     margin: 8px 0;
     display: inline-block;
     border: 1px solid #ccc;
+    border-radius: 5px;
     box-sizing: border-box;
 }
 
 /* Set a style for all buttons */
 input[type=submit] {
     background-color: #ff7f00;
-    border-radius: 10px;
+    border-radius: 20px;
     color: white;
     padding: 14px 20px;
     margin: 8px 0;
