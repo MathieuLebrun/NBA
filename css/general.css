@@ -3,22 +3,28 @@ body{
     display:flex;
     align-items: center;
     justify-content: center;
-    min-height: 100vh;
-    padding: 40px;
-    background: linear-gradient(115deg, #56d8e4 10%, #9f01ea 90%);
-    
-    background-image:url("image_basket.jpg");
+ 
    
-    height: 100%;
-
+}
+.bg-image {
+    /* The image used */
+    background-image: url("image_basket.jpg");
+  
+    /* Add the blur effect */
+    filter: blur(4px);
+    -webkit-filter: blur(4px);
+  
+    /* Full height */
+height: 100vh;
+  width: 100vw;
+  position: absolute;
     /* Center and scale the image nicely */
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-}
-
+  }
 #container{
-    
+    z-index: 999;
     width:400px;
     background: rgba(255, 255, 255, 0.5);
     border-radius: 10px;
