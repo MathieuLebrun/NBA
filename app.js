@@ -16,9 +16,9 @@ var conn = mysql.createConnection({
 
 app.set('view engine','ejs');
 
-app.use('/stuff', express.static('stuff'));
+app.use('/css', express.static('css'));
 
-app.use(express.static(__dirname + 'stuff'));
+app.use(express.static(__dirname + 'css'));
 
 
 
@@ -26,11 +26,11 @@ app.get('/home', function(req,res){
     res.render('home');
 });
 
-app.get('/', function(req,res){
-    res.render('conn');
+app.get('/inscription', function(req,res){
+    res.render('inscription');
 });
 
-app.post('/', urlencodedParser, function(req,res){
+app.post('/inscription', urlencodedParser, function(req,res){
     console.log(req.body);
 
     //insert element dans BD
@@ -70,10 +70,11 @@ app.post('/', urlencodedParser,function(req,res){
 app.get('/nav',function(req,res){
     res.render('partials/nav');
 });
-app.get('/profile/:name',function(req,res){
-    var data = {age:21, job: 'ninja', hobbies: ['manger','pecher', 'lire']};
-    res.render('profile',{person: req.params.name,data: data});
+
+app.get('/contact', function(req,res){
+    res.render('contact');
 });
+
 
 
 app.listen(3000);

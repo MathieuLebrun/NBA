@@ -8,24 +8,25 @@
     
     <body>
         <div class="bg-image"></div>
-        <div id="container">
+        
             <!-- zone de connexion -->
+            <form action="/" method="POST" class="p" id="container">
             <font
             face="Arial";>
                 <h1>Connexion</h1>
                 
                 <label><b>EMAIL</b></label>
-                <input type="text" placeholder="Entrer l'email" name="username" required>
+                <input type="text" placeholder="Entrer l'email" name="email" required>
 
                 <label><b>Mot de passe</b></label>
-                <input type="password" placeholder="Entrer le mot de passe" name="password" required>
+                <input type="password" placeholder="Entrer le mot de passe" name="mdp" required>
 
                 <input type="submit" id='submit' value='LOGIN' >
                 <p>mot de passe oublié ?</p>
-                <p>Vous n'etes pas encore inscrit ? <a href="inscription.html"  style="color:#FF0000;" title="Vous ne le regretterez pas !">Inscription</a></p>
+                <p>Vous n'etes pas encore inscrit ? <a href="/inscription"  style="color:#FF0000;" title="Vous ne le regretterez pas !">Inscription</a></p>
             
             </font>
             </form>
-        </div>
+        
     </body>
 </html>
