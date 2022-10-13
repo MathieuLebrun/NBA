@@ -64,7 +64,7 @@ app.post('/', urlencodedParser,function(req,res){
         });
     });
 
-    res.render('home',{data: req.body});
+    res.render('home');//,{data: req.body}
 });
 
 app.get('/nav',function(req,res){
