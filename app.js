@@ -44,14 +44,14 @@ app.post('/', urlencodedParser, function(req,res){
         });
     });
 
-    res.render('conn-success', {data: req.body});
+    res.render('connexion', {data: req.body});
 });
 
-app.get('/connexion', function(req,res){
+app.get('/', function(req,res){
     res.render('connexion');
 });
 
-app.post('/connexion', urlencodedParser,function(req,res){
+app.post('/', urlencodedParser,function(req,res){
     console.log(req.body);
 
     conn.connect(function(err) {
